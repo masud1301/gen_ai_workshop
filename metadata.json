@@ -1,0 +1,6 @@
+{
+  "name": "SMARTFIX AI",
+  "description": "Turn Campus Complaints into Smart, Actionable Solutions with AI-Powered Classification, Priority Routing, and Analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

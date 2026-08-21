@@ -1,0 +1,822 @@
+{
+  "version": "3.0.0",
+  "last_migration": "2026-08-21T09:23:49.576Z",
+  "users": [
+    {
+      "id": "usr_student_01",
+      "name": "Alex Rivera",
+      "email": "alex.rivera@student.campus.edu",
+      "password_hash": "0628e81b5675bd0ba04553a2fc903dcbc939492749f11047a3bee08e3c65add3deb40de872b359eb29a750e81b556416b9e4d5cafd35ba5e3f2f542cf3af2508",
+      "password_salt": "campus_salt_sec_2026",
+      "role": "student",
+      "student_id": "ST-2024-8841",
+      "department": "Computer Science & Engineering",
+      "room_or_office": "Hostel Block C, Room 312",
+      "phone": "+1 (555) 234-8901",
+      "avatar_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      "status": "active",
+      "created_at": "2026-01-15T08:00:00.000Z",
+      "updated_at": "2026-08-20T00:00:00.000Z"
+    },
+    {
+      "id": "usr_faculty_01",
+      "name": "Dr. Evelyn Vance",
+      "email": "evelyn.vance@faculty.campus.edu",
+      "password_hash": "0628e81b5675bd0ba04553a2fc903dcbc939492749f11047a3bee08e3c65add3deb40de872b359eb29a750e81b556416b9e4d5cafd35ba5e3f2f542cf3af2508",
+      "password_salt": "campus_salt_sec_2026",
+      "role": "faculty",
+      "department": "Department of Electrical Engineering",
+      "room_or_office": "Turing Hall, Faculty Wing 402",
+      "phone": "+1 (555) 345-6789",
+      "avatar_url": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80",
+      "status": "active",
+      "created_at": "2025-08-20T09:30:00.000Z",
+      "updated_at": "2026-08-20T00:00:00.000Z"
+    },
+    {
+      "id": "usr_staff_01",
+      "name": "Marcus Jenkins",
+      "email": "marcus.j@staff.campus.edu",
+      "password_hash": "0628e81b5675bd0ba04553a2fc903dcbc939492749f11047a3bee08e3c65add3deb40de872b359eb29a750e81b556416b9e4d5cafd35ba5e3f2f542cf3af2508",
+      "password_salt": "campus_salt_sec_2026",
+      "role": "staff",
+      "department": "IT Support",
+      "room_or_office": "Central Admin Bldg, Room 104",
+      "phone": "+1 (555) 456-7890",
+      "avatar_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+      "status": "active",
+      "created_at": "2025-06-10T11:15:00.000Z",
+      "updated_at": "2026-08-20T00:00:00.000Z"
+    },
+    {
+      "id": "usr_admin_01",
+      "name": "Dean Arthur Patel",
+      "email": "operations.admin@campus.edu",
+      "password_hash": "0628e81b5675bd0ba04553a2fc903dcbc939492749f11047a3bee08e3c65add3deb40de872b359eb29a750e81b556416b9e4d5cafd35ba5e3f2f542cf3af2508",
+      "password_salt": "campus_salt_sec_2026",
+      "role": "admin",
+      "department": "Administration",
+      "room_or_office": "Vice Chancellor Annex, Suite 500",
+      "phone": "+1 (555) 987-6543",
+      "avatar_url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
+      "status": "active",
+      "created_at": "2025-01-01T00:00:00.000Z",
+      "updated_at": "2026-08-20T00:00:00.000Z"
+    }
+  ],
+  "departments": [
+    {
+      "id": "dept_it_support",
+      "name": "IT Support",
+      "description": "Campus Wi-Fi, computer labs, network switches, AV systems, classroom smartboards, and software accounts.",
+      "status": "active",
+      "code": "IT-SUP",
+      "category": "it_network",
+      "head_name": "Vikram Joshi",
+      "head_email": "v.joshi@campus.edu",
+      "contact_email": "itsupport@campus.edu",
+      "active_staff_count": 8,
+      "open_tickets_count": 6,
+      "sla_avg_hours": 4.2,
+      "sla_compliance_rate": 97.4,
+      "color_theme": "blue",
+      "created_at": "2025-01-01T00:00:00.000Z",
+      "updated_at": "2026-08-20T00:00:00.000Z"
+    },
+    {
+      "id": "dept_electrical_maintenance",
+      "name": "Electrical Maintenance",
+      "description": "Power distribution, high-voltage lines, classroom lighting, power sockets, transformers, and emergency generators.",
+      "status": "active",
+      "code": "ELEC-MAINT",
+      "category": "electrical_power",
+      "head_name": "Robert Vance",
+      "head_email": "r.vance@campus.edu",
+      "contact_email": "electrical@campus.edu",
+      "active_staff_count": 6,
+      "open_tickets_count": 3,
+      "sla_avg_hours": 2.5,
+      "sla_compliance_rate": 99.1,
+      "color_theme": "yellow",
+      "created_at": "2025-01-01T00:00:00.000Z",
+      "updated_at": "2026-08-20T00:00:00.000Z"
+    },
+    {
+      "id": "dept_facility_management",
+      "name": "Facility Management",
+      "description": "Physical campus infrastructure, desks, podiums, AC cooling units, doors, locks, elevators, and hostel furniture.",
+      "status": "active",
+      "code": "FAC-MGMT",
+      "category": "hostel_maintenance",
+      "head_name": "Sarah Jenkins",
+      "head_email": "s.jenkins@campus.edu",
+      "contact_email": "facilities@campus.edu",
+      "active_staff_count": 12,
+      "open_tickets_count": 10,
+      "sla_avg_hours": 6.8,
+      "sla_compliance_rate": 94.1,
+      "color_theme": "amber",
+      "created_at": "2025-01-01T00:00:00.000Z",
+      "updated_at": "2026-08-20T00:00:00.000Z"
+    },
+    {
+      "id": "dept_housekeeping",
+      "name": "Housekeeping",
+      "description": "Daily campus sanitation, hygiene services, floor disinfection, trash collection, and restroom sanitization.",
+      "status": "active",
+      "code": "HOUSEKEEP",
+      "category": "campus_hygiene",
+      "head_name": "Lillian Miller",
+      "head_email": "l.miller@campus.edu",
+      "contact_email": "housekeeping@campus.edu",
+      "active_staff_count": 15,
+      "open_tickets_count": 4,
+      "sla_avg_hours": 3.5,
+      "sla_compliance_rate": 96,
+      "color_theme": "emerald",
+      "created_at": "2025-01-01T00:00:00.000Z",
+      "updated_at": "2026-08-20T00:00:00.000Z"
+    },
+    {
+      "id": "dept_plumbing",
+      "name": "Plumbing",
+      "description": "Clean drinking water dispensers, restroom plumbing, pipeline leaks, drainage lines, and water tank purifiers.",
+      "status": "active",
+      "code": "PLUMB-SERV",
+      "category": "plumbing_water",
+      "head_name": "Maria Rodriguez",
+      "head_email": "m.rodriguez@campus.edu",
+      "contact_email": "plumbing@campus.edu",
+      "active_staff_count": 9,
+      "open_tickets_count": 5,
+      "sla_avg_hours": 5.1,
+      "sla_compliance_rate": 95.8,
+      "color_theme": "cyan",
+      "created_at": "2025-01-01T00:00:00.000Z",
+      "updated_at": "2026-08-20T00:00:00.000Z"
+    },
+    {
+      "id": "dept_security",
+      "name": "Security",
+      "description": "Campus gate security, keycard access, emergency assistance, lost & found logistics, and night surveillance.",
+      "status": "active",
+      "code": "SEC-CAMPUS",
+      "category": "security_safety",
+      "head_name": "Captain David Brooks",
+      "head_email": "d.brooks@campus.edu",
+      "contact_email": "security@campus.edu",
+      "active_staff_count": 18,
+      "open_tickets_count": 2,
+      "sla_avg_hours": 1.8,
+      "sla_compliance_rate": 99.5,
+      "color_theme": "rose",
+      "created_at": "2025-01-01T00:00:00.000Z",
+      "updated_at": "2026-08-20T00:00:00.000Z"
+    },
+    {
+      "id": "dept_administration",
+      "name": "Administration",
+      "description": "Campus governance, academic policy enforcement, budget allocations, resource planning, and grievance appeals.",
+      "status": "active",
+      "code": "ADMIN-CENTRAL",
+      "category": "transport_parking",
+      "head_name": "Dean Arthur Patel",
+      "head_email": "operations.admin@campus.edu",
+      "contact_email": "admin@campus.edu",
+      "active_staff_count": 10,
+      "open_tickets_count": 3,
+      "sla_avg_hours": 12,
+      "sla_compliance_rate": 98,
+      "color_theme": "purple",
+      "created_at": "2025-01-01T00:00:00.000Z",
+      "updated_at": "2026-08-20T00:00:00.000Z"
+    }
+  ],
+  "campus_locations": [
+    {
+      "id": "loc_main_block",
+      "name": "Main Block",
+      "building": "Main Administrative & Academic Wing",
+      "code": "MB-01",
+      "description": "Primary administrative offices, Dean office, auditorium entrance, and central reception.",
+      "is_demo": true,
+      "created_at": "2025-01-01T00:00:00.000Z",
+      "updated_at": "2026-08-20T00:00:00.000Z"
+    },
+    {
+      "id": "loc_comp_lab_1",
+      "name": "Computer Lab 1",
+      "building": "Turing Information Technology Complex",
+      "code": "CL-01",
+      "description": "High-performance AI workstation lab, 60 networked workstations, gigabit switch.",
+      "is_demo": true,
+      "created_at": "2025-01-01T00:00:00.000Z",
+      "updated_at": "2026-08-20T00:00:00.000Z"
+    },
+    {
+      "id": "loc_comp_lab_2",
+      "name": "Computer Lab 2",
+      "building": "Turing Information Technology Complex",
+      "code": "CL-02",
+      "description": "Software engineering & algorithm design laboratory with 45 dual-monitor stations.",
+      "is_demo": true,
+      "created_at": "2025-01-01T00:00:00.000Z",
+      "updated_at": "2026-08-20T00:00:00.000Z"
+    },
+    {
+      "id": "loc_room_204",
+      "name": "Room 204",
+      "building": "Block B - Science & Engineering",
+      "code": "RM-204",
+      "description": "Tiered 120-seat lecture hall with ceiling projector, wireless mic, and dual AC.",
+      "is_demo": true,
+      "created_at": "2025-01-01T00:00:00.000Z",
+      "updated_at": "2026-08-20T00:00:00.000Z"
+    },
+    {
+      "id": "loc_library",
+      "name": "Library",
+      "building": "Central Learning Commons",
+      "code": "LIB-CENTRAL",
+      "description": "Three-story research library with silent study zones, e-resource portals, and archives.",
+      "is_demo": true,
+      "created_at": "2025-01-01T00:00:00.000Z",
+      "updated_at": "2026-08-20T00:00:00.000Z"
+    },
+    {
+      "id": "loc_auditorium",
+      "name": "Auditorium",
+      "building": "Main Block - Grand Hall",
+      "code": "AUD-GRAND",
+      "description": "800-seat grand auditorium for convocations, tech symposiums, and cultural festivals.",
+      "is_demo": true,
+      "created_at": "2025-01-01T00:00:00.000Z",
+      "updated_at": "2026-08-20T00:00:00.000Z"
+    },
+    {
+      "id": "loc_block_b",
+      "name": "Block B",
+      "building": "Block B - Science & Engineering",
+      "code": "BLK-B",
+      "description": "Undergraduate science lecture halls, physics labs, faculty lounges, and seminar rooms.",
+      "is_demo": true,
+      "created_at": "2025-01-01T00:00:00.000Z",
+      "updated_at": "2026-08-20T00:00:00.000Z"
+    },
+    {
+      "id": "loc_hostel",
+      "name": "Hostel",
+      "building": "Residential Block C & Quad",
+      "code": "HSTL-C",
+      "description": "Student residential halls, dining mess hall, recreation lounge, and laundry rooms.",
+      "is_demo": true,
+      "created_at": "2025-01-01T00:00:00.000Z",
+      "updated_at": "2026-08-20T00:00:00.000Z"
+    },
+    {
+      "id": "loc_cafeteria",
+      "name": "Cafeteria",
+      "building": "Student Activity & Dining Hub",
+      "code": "CAFE-01",
+      "description": "Multi-cuisine campus dining facility, food court, juice bar, and outdoor terrace seating.",
+      "is_demo": true,
+      "created_at": "2025-01-01T00:00:00.000Z",
+      "updated_at": "2026-08-20T00:00:00.000Z"
+    }
+  ],
+  "complaints": [
+    {
+      "id": "comp_1787306125962_aohd",
+      "tracking_number": "SF-007",
+      "student_id": "usr_student_01",
+      "title": "Water Leakage in Room 204",
+      "description": "Water is actively leaking from ceiling",
+      "original_message": "Water is actively leaking from ceiling",
+      "issue": "Water Leakage in Room 204",
+      "category": "Water / Plumbing",
+      "location": "Room 204",
+      "building": "Room 204",
+      "priority": "High",
+      "department_id": "dept_plumbing",
+      "status": "Submitted",
+      "duplicate_count": 0,
+      "timeline": [
+        {
+          "id": "tl_1787306125962_1",
+          "timestamp": "2026-08-21T09:55:25.962Z",
+          "actorName": "Alex Rivera",
+          "actorRole": "student",
+          "title": "Complaint Submitted",
+          "description": "Ticket registered under tracking #SF-007",
+          "statusChange": "submitted"
+        }
+      ],
+      "comments": [],
+      "attachments": [],
+      "upvotes": 1,
+      "upvoted_by": [
+        "usr_student_01"
+      ],
+      "is_demo": true,
+      "created_at": "2026-08-21T09:55:25.962Z",
+      "updated_at": "2026-08-21T09:55:25.962Z"
+    },
+    {
+      "id": "comp_1787305967916_ji6w",
+      "tracking_number": "SF-006",
+      "student_id": "usr_student_01",
+      "title": "Wi-Fi unavailable in Hostel Block C, Room 312",
+      "description": "lab 2 ka wifi nhi chal rha",
+      "original_message": "lab 2 ka wifi nhi chal rha",
+      "issue": "Wi-Fi unavailable in Hostel Block C, Room 312",
+      "category": "IT / Network",
+      "location": "Hostel Block C, Room 312",
+      "building": "Hostel Block C, Room 312",
+      "room_number": "Hostel Block C, Room 312",
+      "priority": "Medium",
+      "department_id": "dept_it_support",
+      "status": "resolved",
+      "duplicate_count": 0,
+      "ai_analysis": {
+        "issue": "Wi-Fi unavailable in Hostel Block C, Room 312",
+        "location": "Hostel Block C, Room 312",
+        "category": "IT / Network",
+        "priority": "Medium",
+        "department": "IT Support",
+        "keywords": [
+          "wifi",
+          "lock"
+        ],
+        "summary": "Wi-Fi unavailable in Hostel Block C, Room 312. Priority classified as Medium for IT Support.",
+        "confidence": "Moderate confidence",
+        "estimatedHours": 6,
+        "suggestedActions": [
+          "Ping local gateway switch and check PoE status",
+          "Verify AP channel congestion and uplink port"
+        ]
+      },
+      "timeline": [
+        {
+          "id": "tl_1787305967916_1",
+          "timestamp": "2026-08-21T09:52:47.916Z",
+          "actorName": "Alex Rivera",
+          "actorRole": "student",
+          "title": "Complaint Submitted",
+          "description": "Ticket registered under tracking #SF-006",
+          "statusChange": "submitted"
+        },
+        {
+          "id": "tl_1787306051064",
+          "timestamp": "2026-08-21T09:54:11.062Z",
+          "actorName": "Campus Maintenance",
+          "actorRole": "staff",
+          "title": "Status updated to RESOLVED",
+          "description": "wifi router replaced ",
+          "statusChange": "resolved",
+          "note": "wifi router replaced "
+        }
+      ],
+      "comments": [],
+      "attachments": [],
+      "upvotes": 1,
+      "upvoted_by": [
+        "usr_student_01"
+      ],
+      "is_demo": true,
+      "created_at": "2026-08-21T09:52:47.916Z",
+      "updated_at": "2026-08-21T09:54:11.265Z",
+      "updatedAt": "2026-08-21T09:54:11.062Z",
+      "resolvedAt": "2026-08-21T09:54:11.062Z"
+    },
+    {
+      "id": "comp_1787305864379_q6h0",
+      "tracking_number": "SF-005",
+      "student_id": "usr_student_01",
+      "title": "AC leaking water",
+      "description": "The AC unit in Lab 2 is leaking water onto floor",
+      "original_message": "The AC unit in Lab 2 is leaking water onto floor",
+      "issue": "AC leaking water",
+      "category": "AC",
+      "location": "Computer Lab 2",
+      "building": "Computer Lab 2",
+      "priority": "High",
+      "department_id": "dept_facility_management",
+      "status": "Submitted",
+      "duplicate_count": 0,
+      "timeline": [
+        {
+          "id": "tl_1787305864379_1",
+          "timestamp": "2026-08-21T09:51:04.379Z",
+          "actorName": "Alex Rivera",
+          "actorRole": "student",
+          "title": "Complaint Submitted",
+          "description": "Ticket registered under tracking #SF-005",
+          "statusChange": "submitted"
+        }
+      ],
+      "comments": [],
+      "attachments": [],
+      "upvotes": 1,
+      "upvoted_by": [
+        "usr_student_01"
+      ],
+      "is_demo": false,
+      "created_at": "2026-08-21T09:51:04.379Z",
+      "updated_at": "2026-08-21T09:51:04.379Z"
+    },
+    {
+      "id": "comp_002",
+      "tracking_number": "SF-002",
+      "student_id": "usr_faculty_01",
+      "title": "Overheating HDMI Projector in Room 204",
+      "description": "Projector in Room 204 has a flickering blue tint and shuts down after 10 minutes of lecture.",
+      "original_message": "Projector in Room 204 has a flickering blue tint and shuts down after 10 minutes of lecture.",
+      "issue": "Overheating HDMI Projector in Room 204",
+      "category": "Classroom Equipment",
+      "location": "Room 204",
+      "building": "Block B - Science & Engineering",
+      "room_number": "Room 204",
+      "priority": "Medium",
+      "department_id": "dept_it_support",
+      "assigned_staff_id": "usr_staff_01",
+      "status": "Assigned",
+      "duplicate_count": 0,
+      "timeline": [
+        {
+          "id": "tl_201",
+          "timestamp": "2026-08-20T11:30:00.000Z",
+          "actorName": "Dr. Evelyn Vance",
+          "actorRole": "faculty",
+          "title": "Request Logged",
+          "description": "Classroom issue reported prior to 2:00 PM lecture.",
+          "statusChange": "submitted"
+        },
+        {
+          "id": "tl_202",
+          "timestamp": "2026-08-20T12:00:00.000Z",
+          "actorName": "Dean Arthur Patel",
+          "actorRole": "admin",
+          "title": "Assigned to IT Support",
+          "description": "Technician dispatched for lamp replacement.",
+          "statusChange": "assigned"
+        }
+      ],
+      "comments": [],
+      "upvotes": 3,
+      "is_demo": true,
+      "created_at": "2026-08-20T11:30:00.000Z",
+      "updated_at": "2026-08-20T12:00:00.000Z"
+    },
+    {
+      "id": "comp_001",
+      "tracking_number": "SF-001",
+      "student_id": "usr_student_01",
+      "title": "Frequent Wi-Fi Disconnections in Computer Lab 1",
+      "description": "The Wi-Fi access point in Computer Lab 1 keeps dropping connection every 5 minutes during our AI practicals.",
+      "original_message": "The Wi-Fi access point in Computer Lab 1 keeps dropping connection every 5 minutes during our AI practicals.",
+      "issue": "Frequent Wi-Fi Disconnections in Computer Lab 1",
+      "category": "IT / Network",
+      "location": "Computer Lab 1",
+      "building": "Turing Information Technology Complex",
+      "room_number": "Lab 1",
+      "priority": "High",
+      "department_id": "dept_it_support",
+      "assigned_staff_id": "usr_staff_01",
+      "status": "In Progress",
+      "duplicate_count": 0,
+      "ai_analysis": {
+        "detectedCategory": "it_network",
+        "confidenceScore": 0.96,
+        "extractedEntities": {
+          "location": "Computer Lab 1",
+          "equipmentOrItem": "Cisco AP-540 Wireless Access Point",
+          "impactLevel": "High (impacts 60 practical students)",
+          "urgencyReason": "Scheduled lab classes in session"
+        },
+        "recommendedPriority": "high",
+        "priorityRationale": "High density student academic facility experiencing repeated packet drops.",
+        "recommendedDepartmentId": "dept_it_support",
+        "similarComplaintIds": [],
+        "suggestedQuickActions": [
+          "Reboot core switch port 14",
+          "Inspect 5GHz channel congestion"
+        ],
+        "estimatedResolutionHours": 2
+      },
+      "timeline": [
+        {
+          "id": "tl_101",
+          "timestamp": "2026-08-20T10:14:00.000Z",
+          "actorName": "Alex Rivera",
+          "actorRole": "student",
+          "title": "Ticket Submitted",
+          "description": "Complaint registered via student mobile portal.",
+          "statusChange": "submitted"
+        },
+        {
+          "id": "tl_102",
+          "timestamp": "2026-08-20T10:14:15.000Z",
+          "actorName": "SmartFix AI Engine",
+          "actorRole": "system_ai",
+          "title": "AI Classification (96% Confidence)",
+          "description": "Auto-routed to IT Support. Priority set to High based on academic lab keyword extraction.",
+          "statusChange": "ai_classified"
+        },
+        {
+          "id": "tl_103",
+          "timestamp": "2026-08-20T11:00:00.000Z",
+          "actorName": "Dean Arthur Patel",
+          "actorRole": "admin",
+          "title": "Assigned to Marcus Jenkins",
+          "description": "Work order dispatched to Network Ops specialist.",
+          "statusChange": "assigned"
+        },
+        {
+          "id": "tl_104",
+          "timestamp": "2026-08-20T14:30:00.000Z",
+          "actorName": "Marcus Jenkins",
+          "actorRole": "staff",
+          "title": "Work In Progress",
+          "description": "Replaced faulty PoE injector and running signal diagnostic test.",
+          "statusChange": "in_progress",
+          "note": "Firmware update required on AP controller."
+        }
+      ],
+      "comments": [
+        {
+          "id": "cm_01",
+          "authorId": "usr_staff_01",
+          "authorName": "Marcus Jenkins",
+          "authorRole": "staff",
+          "createdAt": "2026-08-20T14:35:00.000Z",
+          "content": "I have replaced the power injector on the ceiling mount. Performing final channel scan now."
+        }
+      ],
+      "upvotes": 8,
+      "upvoted_by": [
+        "usr_student_01"
+      ],
+      "is_demo": true,
+      "created_at": "2026-08-20T10:14:00.000Z",
+      "updated_at": "2026-08-20T14:30:00.000Z"
+    },
+    {
+      "id": "comp_003",
+      "tracking_number": "SF-003",
+      "student_id": "usr_student_01",
+      "title": "Water Pipe Leak in Hostel 3rd Floor Restroom",
+      "description": "Water leakage in 3rd floor washroom of Hostel Block C near room 310.",
+      "original_message": "Water leakage in 3rd floor washroom of Hostel Block C near room 310.",
+      "issue": "Water Pipe Leak in Hostel 3rd Floor Restroom",
+      "category": "Water / Plumbing",
+      "location": "Hostel",
+      "building": "Hostel Block C",
+      "room_number": "3rd Floor Restroom",
+      "priority": "Emergency",
+      "department_id": "dept_plumbing",
+      "assigned_staff_id": "usr_staff_01",
+      "status": "In Progress",
+      "duplicate_count": 0,
+      "timeline": [
+        {
+          "id": "tl_301",
+          "timestamp": "2026-08-20T08:00:00.000Z",
+          "actorName": "Alex Rivera",
+          "actorRole": "student",
+          "title": "Emergency Ticket Created",
+          "description": "Water pooling on floor.",
+          "statusChange": "submitted"
+        }
+      ],
+      "comments": [],
+      "upvotes": 14,
+      "is_demo": true,
+      "created_at": "2026-08-20T08:00:00.000Z",
+      "updated_at": "2026-08-20T09:15:00.000Z"
+    },
+    {
+      "id": "comp_004",
+      "tracking_number": "SF-004",
+      "student_id": "usr_student_01",
+      "title": "Electrical Buzzing Noise near Library Main Floor",
+      "description": "Main electrical distribution panel making buzzing noise near Library ground floor.",
+      "original_message": "Main electrical distribution panel making buzzing noise near Library ground floor.",
+      "issue": "Electrical Buzzing Noise near Library Main Floor",
+      "category": "Electrical",
+      "location": "Library",
+      "building": "Library",
+      "room_number": "Ground Floor Utility",
+      "priority": "High",
+      "department_id": "dept_electrical_maintenance",
+      "status": "Resolved",
+      "duplicate_count": 0,
+      "resolved_at": "2026-08-19T16:45:00.000Z",
+      "timeline": [
+        {
+          "id": "tl_401",
+          "timestamp": "2026-08-19T09:00:00.000Z",
+          "actorName": "Alex Rivera",
+          "actorRole": "student",
+          "title": "Reported",
+          "description": "Audible hum from circuit breakers.",
+          "statusChange": "submitted"
+        },
+        {
+          "id": "tl_402",
+          "timestamp": "2026-08-19T16:45:00.000Z",
+          "actorName": "Robert Vance",
+          "actorRole": "staff",
+          "title": "Resolved",
+          "description": "Tightened neutral lug and balanced phase loads.",
+          "statusChange": "resolved"
+        }
+      ],
+      "comments": [],
+      "upvotes": 5,
+      "satisfaction_rating": 5,
+      "satisfaction_feedback": "Super fast turnaround! The quiet study space is quiet again.",
+      "is_demo": true,
+      "created_at": "2026-08-19T09:00:00.000Z",
+      "updated_at": "2026-08-19T16:45:00.000Z"
+    }
+  ],
+  "complaint_status_history": [
+    {
+      "id": "hist_1787306125962_63w3",
+      "complaint_id": "comp_1787306125962_aohd",
+      "status": "Submitted",
+      "note": "Complaint initially submitted to SmartFix AI.",
+      "updated_by": "Alex Rivera",
+      "created_at": "2026-08-21T09:55:25.962Z"
+    },
+    {
+      "id": "hist_1787305967916_61hg",
+      "complaint_id": "comp_1787305967916_ji6w",
+      "status": "Submitted",
+      "note": "Complaint initially submitted to SmartFix AI.",
+      "updated_by": "Alex Rivera",
+      "created_at": "2026-08-21T09:52:47.916Z"
+    },
+    {
+      "id": "hist_1787305864379_9ll3",
+      "complaint_id": "comp_1787305864379_q6h0",
+      "status": "Submitted",
+      "note": "Complaint initially submitted to SmartFix AI.",
+      "updated_by": "Alex Rivera",
+      "created_at": "2026-08-21T09:51:04.379Z"
+    },
+    {
+      "id": "hist_001",
+      "complaint_id": "comp_001",
+      "status": "Submitted",
+      "note": "Complaint registered via student portal",
+      "updated_by": "Alex Rivera",
+      "created_at": "2026-08-20T10:14:00.000Z"
+    },
+    {
+      "id": "hist_002",
+      "complaint_id": "comp_001",
+      "status": "AI Analyzed",
+      "note": "Categorized as IT / Network with High priority (96% confidence)",
+      "updated_by": "SmartFix AI Engine",
+      "created_at": "2026-08-20T10:14:15.000Z"
+    },
+    {
+      "id": "hist_003",
+      "complaint_id": "comp_001",
+      "status": "Assigned",
+      "note": "Dispatched to Marcus Jenkins (IT Support)",
+      "updated_by": "Dean Arthur Patel",
+      "created_at": "2026-08-20T11:00:00.000Z"
+    },
+    {
+      "id": "hist_004",
+      "complaint_id": "comp_001",
+      "status": "In Progress",
+      "note": "PoE injector replaced; testing wireless channels",
+      "updated_by": "Marcus Jenkins",
+      "created_at": "2026-08-20T14:30:00.000Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif_1787306051267_2i44",
+      "user_id": "usr_student_01",
+      "title": "Status Updated: SF-006",
+      "message": "Issue \"Wi-Fi unavailable in Hostel Block C, Room 312\" is now RESOLVED.",
+      "type": "complaint_update",
+      "priority": "normal",
+      "read": true,
+      "link": "/student/complaints/comp_1787305967916_ji6w",
+      "created_at": "2026-08-21T09:54:11.267Z"
+    },
+    {
+      "id": "notif_001",
+      "user_id": "usr_student_01",
+      "title": "Work Order In Progress: SMART-2026-1044",
+      "message": "Marcus Jenkins from IT Support has started work on your Wi-Fi issue in Computer Lab 1.",
+      "type": "complaint_update",
+      "read": true,
+      "related_complaint_id": "comp_001",
+      "link": "/student/complaints/comp_001",
+      "created_at": "2026-08-20T14:30:00.000Z"
+    },
+    {
+      "id": "notif_003",
+      "user_id": "usr_faculty_01",
+      "title": "SmartFix AI: Room 204 Projector Assigned",
+      "message": "Work order dispatched to IT Support. Expected completion within 2 hours.",
+      "type": "complaint_update",
+      "read": true,
+      "related_complaint_id": "comp_002",
+      "link": "/student/complaints/comp_002",
+      "created_at": "2026-08-20T12:00:00.000Z"
+    },
+    {
+      "id": "notif_002",
+      "user_id": "usr_student_01",
+      "title": "Scheduled Maintenance Notice",
+      "message": "Campus water pipeline maintenance scheduled for Hostel Block C on Saturday between 2 PM - 5 PM.",
+      "type": "campus_alert",
+      "read": true,
+      "created_at": "2026-08-19T09:00:00.000Z"
+    }
+  ],
+  "lost_found_items": [
+    {
+      "id": "lf_002",
+      "reported_by": "usr_staff_01",
+      "type": "found",
+      "title": "Tablet with Blue Magnetic Case found at Podium",
+      "description": "Found by housekeeping staff during routine evening sweep of Room 204. Handed over to Central Security.",
+      "location": "Room 204",
+      "date": "2026-08-20",
+      "status": "active",
+      "possible_match": "lf_001",
+      "category": "electronics",
+      "contact_info": "security@campus.edu (Ext. 2201)",
+      "reported_by_name": "Campus Security Desk",
+      "image_url": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=300&auto=format&fit=crop&q=80",
+      "created_at": "2026-08-20T17:00:00.000Z",
+      "updated_at": "2026-08-20T17:00:00.000Z"
+    },
+    {
+      "id": "lf_001",
+      "reported_by": "usr_student_01",
+      "type": "lost",
+      "title": "Silver Apple iPad Air (11-inch) in Navy Folio Case",
+      "description": "Left on desk row 4 during CS401 Lecture. Contains handwritten machine learning notes with blue stylus.",
+      "location": "Room 204",
+      "date": "2026-08-20",
+      "status": "active",
+      "possible_match": "lf_002",
+      "category": "electronics",
+      "contact_info": "alex.rivera@student.campus.edu",
+      "reported_by_name": "Alex Rivera",
+      "image_url": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=300&auto=format&fit=crop&q=80",
+      "created_at": "2026-08-20T12:30:00.000Z",
+      "updated_at": "2026-08-20T12:30:00.000Z"
+    },
+    {
+      "id": "lf_003",
+      "reported_by": "usr_student_01",
+      "type": "found",
+      "title": "Texas Instruments Graphing Calculator TI-84 Plus",
+      "description": "Found on table 12 near the Reference Section in Library. Handed to librarian front desk.",
+      "location": "Library",
+      "date": "2026-08-19",
+      "status": "claimed",
+      "category": "accessories",
+      "contact_info": "library.desk@campus.edu",
+      "reported_by_name": "Central Library Desk",
+      "created_at": "2026-08-19T14:15:00.000Z",
+      "updated_at": "2026-08-19T14:15:00.000Z"
+    }
+  ],
+  "sessions": [
+    {
+      "token": "demo_tok_faculty_1787304922665",
+      "user_id": "usr_faculty_01",
+      "created_at": "2026-08-21T09:35:22.665Z",
+      "expires_at": "2026-08-28T09:35:22.665Z"
+    },
+    {
+      "token": "demo_tok_staff_1787306019788",
+      "user_id": "usr_staff_01",
+      "created_at": "2026-08-21T09:53:39.789Z",
+      "expires_at": "2026-08-28T09:53:39.788Z"
+    },
+    {
+      "token": "demo_tok_student_1787306058460",
+      "user_id": "usr_student_01",
+      "created_at": "2026-08-21T09:54:18.460Z",
+      "expires_at": "2026-08-28T09:54:18.460Z"
+    },
+    {
+      "token": "demo_tok_admin_1787306074508",
+      "user_id": "usr_admin_01",
+      "created_at": "2026-08-21T09:54:34.508Z",
+      "expires_at": "2026-08-28T09:54:34.508Z"
+    }
+  ]
+}
